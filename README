@@ -2,7 +2,7 @@ var enmailer('keystone-enmailer');
 
 var Email = new keystone.Email('welcome');
 Email.send({
-    mandrill: mailer.mandrill,
+    mandrill: enmailer.mandrill,
     comments: "the comments",
     subject: 'the subject',
     to: "someone@somewhere.com",
