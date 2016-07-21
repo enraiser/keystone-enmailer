@@ -17,6 +17,7 @@
   "author": "Sachin Sharma <sachin@enraiser.com> (https://www.enraiser.com)",
   "license": "MIT",
   "dependencies": {
-    "keystone-nodemailer": "^0.1.1"
+    "nodemailer": "^2.5.0",
+    "q": "^1.4.1"
   }
 }
