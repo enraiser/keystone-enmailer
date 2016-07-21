@@ -1,2 +1,13 @@
+var enmailer('keystone-enmailer');
 
-Here you will find node modules developed by enRaiser.
+var Email = new keystone.Email('welcome');
+Email.send({
+    mandrill: mailer.mandrill,
+    comments: "the comments",
+    subject: 'the subject',
+    to: "someone@somewhere.com",
+    from: {
+        name: 'Sachin Sharma',
+        email: 'admin@lastwish.me'
+    }
+});

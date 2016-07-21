@@ -1,4 +1,3 @@
-//mailer.js exports an object that matches what Keystone expects for its Mandrill objects, allowing you to use node-mailer (in this case) for sending email.
 
 var nodemailer = require('nodemailer'),
     smtp = require('nodemailer-smtp-transport'),
@@ -9,8 +8,8 @@ if (!process.env.SMTP_USER || !process.env.SMTP_PASS) throw new Error("Expected 
 
 //Also see more node mailer transport options https://github.com/nodemailer/nodemailer
 var transport = nodemailer.createTransport(smtp({
-    host: '',
-    port: 25,
+    host: 'us2.smtp.mailhostbox.com',
+    port: 587,
     secure: false,
     ignoreTLS: true,
     auth: {
