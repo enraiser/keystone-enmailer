@@ -1,5 +1,3 @@
-<snippet>
-  <content><![CDATA[
 # ${1:Project Name}
 TODO: sending SMTP mail with Jade template
 ## Installation
@@ -37,6 +35,3 @@ Email.send({
     }
 });
 
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
