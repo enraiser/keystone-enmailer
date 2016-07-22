@@ -1,5 +1,7 @@
-# ${1:Project Name}
-TODO: sending SMTP mail with Jade template
+keystone-enmailer
+=====
+
+**sending SMTP mail with Jade template **
 ## Installation
 
 (1)create keystone project using yo keystone, and do not choose email feature.
