@@ -5,14 +5,16 @@ keystone-enmailer
 ## Installation
 
 1. create keystone project using yo keystone, and do not choose email feature.
-2. npm install git+https://git@github.com/enraiser/keystone-enmailer.git
+2. install keystone-enmailer
+    npm install git+https://git@github.com/enraiser/keystone-enmailer.git
 3. In keystone.js at keystone.init add email template
 
 ```keystone.init({
         ... 
         'emails': 'templates/emails',
 
-});```
+});
+```
 
 4. add globals in .env file
 
@@ -35,5 +37,6 @@ Email.send({
         name: 'Sachin Sharma',
         email: 'admin@lastwish.me'
     }
-});```
+});
+```
 
