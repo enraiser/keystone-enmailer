@@ -20,6 +20,10 @@ keystone.init({
 
 4. add globals in .env file
 
+     SMTP_HOST=us2.smtp.mailhostbox.com'
+     
+     SMTP_PORT=587
+
     SMTP_USER=admin@lastwish.me
 
     SMTP_PASS=*********

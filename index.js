@@ -4,12 +4,13 @@ var nodemailer = require('nodemailer'),
     Q = require('q'),
     _ = require('underscore');
 
-if (!process.env.SMTP_USER || !process.env.SMTP_PASS) throw new Error("Expected SMTP_USER and SMTP_PASS env, missing one or both.");
+
+if (!process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_HOST || !process.env.SMTP_PORT) throw new Error("Expected SMTP_USER,SMTP_PASS, SMTP_HOST and SMTP_PORT env, missing one or both.");
 
 //Also see more node mailer transport options https://github.com/nodemailer/nodemailer
 var transport = nodemailer.createTransport(smtp({
-    host: 'us2.smtp.mailhostbox.com',
-    port: 587,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
     secure: false,
     ignoreTLS: true,
     auth: {
