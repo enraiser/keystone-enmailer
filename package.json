@@ -16,7 +16,7 @@
   ],
   "author": "Sachin Sharma <sachin@enraiser.com> (https://www.enraiser.com)",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "nodemailer": "^2.5.0",
     "q": "^1.4.1"
   }
