@@ -35,7 +35,7 @@ var send = function (toSend, onSuccess, onFail) {
 
     var messageBase = {
         from: "\"" + message.from_name + "\" <" + message.from_email + ">",
-        subject: message.subject + " - " + Date.now(),
+        subject: message.subject ,
         html: message.html
     };
 
