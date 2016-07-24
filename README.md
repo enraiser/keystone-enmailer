@@ -34,21 +34,33 @@ sending SMTP mail with Jade template
 
 3.  create welcome.jade in templates/emails folder
 
+    ```html
+    block body-contents
+        h1 Hi #{first_name},
+        p.text-larger We would like to verify your EmailID to enroll you on #{brand}.
+        p.text-larger click&nbsp;
+            a(href='#{link}') 
+                strong this link
+            |  &nbsp; to complete this verification.
+    ```
+
 4. now wherever you want to send mail  add this code
 
    ```javascript
    var enmailer('keystone-enmailer');
 
    var Email = new keystone.Email('welcome');
+   var brand = keystone.get('brand');
    Email.send({
-     mandrill: enmailer.mandrill,
-     comments: "the comments",
-     subject: 'the subject',
-     to: "someone@somewhere.com",
-     from: {
-        name: 'Sachin Sharma',
-        email: 'admin@lastwish.me'
-     }
+       mandrill: enmailer.mandrill,
+       first_name: 'Sachin Sharma',
+       link: "action/verify?user_id=" +newUser._id,
+       subject: 'Please verify your email',
+       to: "someone@somewhere.com",
+       from: {
+            name:brand,
+            email: process.env.SMTP_USER
+        }
    });
    ```
 
