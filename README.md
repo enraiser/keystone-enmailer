@@ -27,9 +27,9 @@ sending SMTP mail with Jade template
      
      SMTP_PORT=587
 
-    SMTP_USER=admin@lastwish.me
+     SITE_EMAIL_ADDRESS=admin@lastwish.me
 
-    SMTP_PASS=*********
+     SITE_EMAIL_PASSWD=*********
     ```
 
 3.  create welcome.jade in templates/emails folder
@@ -59,7 +59,7 @@ sending SMTP mail with Jade template
        to: "someone@somewhere.com",
        from: {
             name:brand,
-            email: process.env.SMTP_USER
+            email: process.env.SITE_EMAIL_ADDRESS
         }
    });
    ```
